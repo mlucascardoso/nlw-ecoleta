@@ -1,0 +1,43 @@
+### CREATE POINT
+POST http://localhost:3333/points HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Mercado Imperatriz",
+    "email": "contato@imperatriz.com.br",
+    "whatsapp": "4799999999",
+    "latitude": -46.81273213,
+    "longitude": -35.19238112,
+    "city": "Florianopolis",
+    "uf": "SC",
+    "items": [
+        1, 
+        2, 
+        6
+    ]
+}
+
+### CREATE POINT
+POST http://localhost:3333/points HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Mercado do seu Zé",
+    "email": "contato@zezinho.com.br",
+    "whatsapp": "4899999999",
+    "latitude": -46.81273213,
+    "longitude": -35.19238112,
+    "city": "Joinville",
+    "uf": "SC",
+    "items": [
+        3
+    ]
+}
+
+### GET ALL
+GET http://localhost:3333/points/?city=Florianopolis&uf=SC&items=1 HTTP/1.1
+content-type: application/json
+
+### GET BY ID
+GET http://localhost:3333/points/5 HTTP/1.1
+content-type: application/json
